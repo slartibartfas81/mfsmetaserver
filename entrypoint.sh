@@ -11,10 +11,10 @@ do
                 cp /usr/local/$(basename "$configFiles") /usr/local/etc/mfs/
         fi
 done
-MASTER_CFG=/usr/local/etc/mfs/mfsmetalogger.cfg
+CFG_FILE=/usr/local/etc/mfs/mfsmetalogger.cfg
 
 echo "Set master host as $MFSM_MASTERHOST"
-sed -i "s/^MASTER_HOST = .*\|# MASTER_HOST = mfsmaster/MASTER_HOST = $MFSM_MASTERHOST/g" $MASTER_CFG
+sed -i "s/^MASTER_HOST = .*\|# MASTER_HOST = mfsmaster/MASTER_HOST = $MFSM_MASTERHOST/g" $CFG_FILE
 
 echo ""
 echo "here we go..."
