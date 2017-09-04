@@ -15,7 +15,7 @@ CFG_FILE=/usr/local/etc/mfs/mfsmetalogger.cfg
 
 echo "Set master host as $MFSM_MASTERHOST"
 sed -i "s/^MASTER_HOST = .*\|# MASTER_HOST = mfsmaster/MASTER_HOST = $MFSM_MASTERHOST/g" $CFG_FILE
-echo "Set backlogs to $MFSM_BACKLOG"
+echo "Set backlogs to $MFSM_BACKLOGS"
 sed -i "s/^BACK_LOGS = .*|# BACK_LOGS = .*/BACK_LOGS = $MFSM_BACKLOGS/g" $CFG_FILE
 echo "Set download frequency to $MFSM_DLFREQ"
 if [ $(($MFSM_BACKLOGS/2)) -gt $MFSM_DLFREQ ]
