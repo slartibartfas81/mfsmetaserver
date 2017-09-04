@@ -11,6 +11,8 @@ COPY mfsmetalogger.cfg /usr/local/mfsmetalogger.cfg
 VOLUME /usr/local/var/lib/mfs/
 
 ENV MFSM_MASTERHOST mfsmaster
+ENV MFSM_BACKLOGS 24
+ENV MFSM_DLFREQ 10
 
 COPY entrypoint.sh ./entrypoint.sh
 ENTRYPOINT ["./entrypoint.sh"]
